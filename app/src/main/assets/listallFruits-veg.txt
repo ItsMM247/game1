@@ -1,0 +1,316 @@
+﻿Açaí
+Ackee
+Apple
+Apricot
+Avocado
+Banana
+Bilberry
+Blackberry
+Blackcurrant
+Black sapote
+Blueberry
+Boysenberry
+Breadfruit
+Buddha's hand
+Cactus pear
+Crab apple
+Currant
+Cherry
+Cherimoya
+Chico fruit
+Cloudberry
+Coconut
+Cranberry
+Damson
+Date
+Dragonfruit
+Durian
+Elderberry
+Feijoa
+Fig
+Goji berry
+Gooseberry
+Grape
+Raisin
+Grapefruit
+Guava
+Honeyberry
+Huckleberry
+Jabuticaba
+Jackfruit
+Jambul
+Japanese plum
+Jostaberry
+Jujube
+Juniper berry
+Kiwano
+Kiwifruit
+Kumquat
+Lemon
+Lime
+Loganberry
+Loquat
+Longan
+Lychee
+Mango
+Mangosteen
+Marionberry
+Melon
+Cantaloupe
+Galia melon
+Honeydew
+Watermelon
+Miracle fruit
+Mulberry
+Nectarine
+Nance
+Orange
+Blood orange
+Clementine
+Mandarine
+Tangerine
+Papaya
+Passionfruit
+Peach
+Pear
+Persimmon
+Plantain
+Plum
+Prune
+Pineapple
+Pineberry
+Plumcot
+Pomegranate
+Pomelo
+Purple mangosteen
+Quince
+Raspberry
+Salmonberry
+Rambutan
+Redcurrant
+Salal berry
+Salak
+Satsuma
+Soursop
+Star apple
+Star fruit
+Strawberry
+Surinam cherry
+Tamarillo
+Tamarind
+Tangelo
+Tayberry
+Ugli fruit
+White currant
+White sapote
+Yuzu
+Bell pepper
+Chile pepper
+Corn kernel
+Cucumber
+Eggplant
+Jalapeño
+Olive
+Pea
+Pumpkin
+Squash
+Tomato
+Zucchini
+artichoke
+aubergine
+asparagus
+legumes
+alfalfa
+azuki beans
+bean sprouts
+black beans
+black-eyed peas
+borlotti bean
+broad beans
+chickpeas
+green beans
+kidney beans
+lentils
+lima beans
+butter bean
+mung beans
+navy beans
+peanuts
+pinto beans
+runner beans
+split peas
+soy beans
+peas
+mangetout 
+snap peas
+broccoflower
+broccoli 
+brussels sprouts
+cabbage
+kohlrabi
+Savoy cabbage
+red cabbage
+cauliflower
+celery
+endive
+fiddleheads
+frisee
+fennel
+greens
+bok choy
+chard
+collard greens
+kale
+mustard greens
+spinach
+herbs
+spices
+anise
+basil
+caraway
+coriander
+chamomile
+daikon
+fennel
+lavender
+cymbopogon 
+lemongrass
+marjoram
+oregano
+parsley
+rosemary
+sage
+thyme
+lettuce
+arugula
+mushrooms
+nettles
+New Zealand spinach
+okra
+Onions
+chives
+garlic
+leek
+onion
+shallot
+scallion 
+spring onion
+green onion
+peppers
+bell pepper
+chili pepper
+jalapeño
+habanero
+paprika
+tabasco pepper
+cayenne pepper
+radicchio
+rhubarb
+root vegetables
+beetroot
+mangel-wurzel
+carrot
+celeriac
+corms
+eddoe
+konjac
+taro
+water chestnut
+ginger
+parsnip
+rutabaga
+radish
+wasabi
+horseradish
+white radish
+Diakon
+tubers
+jicama
+jerusalem artichoke
+potato
+sweet potato
+yam
+turnip
+salsify
+Oyster Plant
+skirret
+sweetcorn
+topinambur
+squashes
+acorn squash
+bitter melon
+butternut squash
+banana squash
+courgette 
+Zucchini
+cucumber
+delicata
+gem squash
+hubbard squash
+marrow 
+Squash 
+spaghetti squash
+tat soi
+tomato
+watercress
+Apple
+Apricot
+Asparagus
+Aubergine
+Avocado
+Banana
+Beetroot
+Black-eye bean
+Broad bean
+Broccoli
+Brussels sprout
+Butternut Squash
+Carrot
+Cherry
+Clementine
+Courgette
+Date
+Elderberry
+Endive
+Fennel
+Fig
+Garlic
+Grape
+Green bean
+Guava
+Haricot bean
+Honeydew melon
+Iceberg lettuce
+Jerusalem artichoke
+Kiwi fruit
+Leek
+Lemon
+Mango
+Melon
+Mushroom
+Nectarine
+Nut
+Olive
+Orange
+Pea
+Peanut
+Pear
+Pepper
+Pineapple
+Pumpkin
+Quince
+Radish
+Raisin
+Rhubarb
+Satsuma
+Strawberry
+Sweet potato
+Tomato
+Turnip
+Ugli fruit
+Victoria plum
+Vine leaf
+Watercress
+Watermelon
+Yam
+Zucchini
