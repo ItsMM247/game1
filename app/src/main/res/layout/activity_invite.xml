@@ -79,34 +79,4 @@
             android:text="Create"
             android:textSize="25dp"></Button>
     </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_marginTop="70dp"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <Button
-            android:background="@drawable/group_icon"
-            android:id="@+id/fbtn1"
-            android:layout_width="80dp"
-            android:layout_height="50dp"></Button>
-        <Button
-            android:background="@drawable/menu_icon"
-            android:layout_toRightOf="@+id/fbtn1"
-            android:id="@+id/fbtn2"
-            android:layout_width="60dp"
-            android:layout_height="50dp"></Button>
-        <Button
-            android:background="@drawable/cart_icon"
-            android:layout_toRightOf="@+id/fbtn2"
-            android:id="@+id/fbtn3"
-            android:layout_width="80dp"
-            android:layout_height="50dp"></Button>
-        <Button
-            android:background="@drawable/seeting_icon"
-            android:layout_toRightOf="@+id/fbtn3"
-            android:id="@+id/fbtn4"
-            android:layout_width="80dp"
-            android:layout_height="50dp"></Button>
-    </RelativeLayout>
 </LinearLayout>
