@@ -8,151 +8,170 @@
     android:background="@drawable/background_major"
     tools:context=".MainActivity">
     <RelativeLayout
-        android:layout_marginTop="0dp"
         android:layout_width="match_parent"
-        android:layout_height="45dp">
+        android:layout_height="wrap_content">
         <ImageButton
+            android:id="@+id/dph"
+            android:layout_marginTop="3dp"
             android:layout_marginLeft="15dp"
             android:background="@drawable/dp_icon"
-            android:layout_width="60dp"
-            android:layout_height="50dp"></ImageButton>
+            android:layout_width="80dp"
+            android:layout_height="75dp"></ImageButton>
 
         <TextView
-            android:layout_marginTop="-5dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/coin"
             android:background="@drawable/hint_icon"
             android:gravity="center"
-            android:layout_marginRight="9dp"
-            android:layout_toLeftOf="@+id/coin"
             android:id="@+id/hint"
             android:layout_width="85dp"
-            android:layout_height="45dp" />
+            android:layout_height="30dp"/>
 
         <TextView
+            android:layout_marginTop="10dp"
+            android:layout_alignParentEnd="true"
             android:background="@drawable/coins_icon"
             android:gravity="center"
-            android:layout_marginRight="9dp"
-            android:layout_toLeftOf="@+id/setting"
+            android:layout_marginRight="10dp"
             android:id="@+id/coin"
             android:layout_width="85dp"
-            android:layout_height="match_parent"/>
+            android:layout_height="30dp"/>
         <Button
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/dph"
             android:id="@+id/setting"
-            android:layout_alignParentEnd="true"
             android:background="@drawable/seeting_icon"
-            android:layout_width="40dp"
-            android:layout_height="35dp"
-            android:layout_alignParentRight="true">
+            android:layout_width="35dp"
+            android:layout_height="30dp">
+        </Button>
+        <Button
+            android:layout_marginStart="15dp"
+            android:layout_below="@+id/setting"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="25dp"
+            android:id="@+id/group"
+            android:background="@drawable/group_icon"
+            android:layout_width="45dp"
+            android:layout_height="40dp">
         </Button>
     </RelativeLayout>
-    <RelativeLayout
-        android:background="@drawable/selection_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="440dp">
-        <TableLayout
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="45dp"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:stretchColumns="1">
-
-            <TableRow>
-                <TextView
-                    android:layout_column="1"
-                    android:text="Open..."
-                    android:padding="3dip" />
-                <TextView
-                    android:text="Ctrl-O"
-                    android:gravity="right"
-                    android:padding="3dip" />
-            </TableRow>
-
-            <TableRow>
-                <TextView
-                    android:layout_column="1"
-                    android:text="Save..."
-                    android:padding="3dip" />
-                <TextView
-                    android:text="Ctrl-S"
-                    android:gravity="right"
-                    android:padding="3dip" />
-            </TableRow>
-
-            <TableRow>
-                <TextView
-                    android:layout_column="1"
-                    android:text="Save As..."
-                    android:padding="3dip" />
-                <TextView
-                    android:text="Ctrl-Shift-S"
-                    android:gravity="right"
-                    android:padding="3dip" />
-            </TableRow>
-
-            <View
-                android:layout_height="2dip"
-                android:background="#FF909090" />
-
-            <TableRow>
-                <TextView
-                    android:text="X"
-                    android:padding="3dip" />
-                <TextView
-                    android:text="Import..."
-                    android:padding="3dip" />
-            </TableRow>
-
-            <TableRow>
-                <TextView
-                    android:text="X"
-                    android:padding="3dip" />
-                <TextView
-                    android:text="Export..."
-                    android:padding="3dip" />
-                <TextView
-                    android:text="Ctrl-E"
-                    android:gravity="right"
-                    android:padding="3dip" />
-            </TableRow>
-
-            <View
-                android:layout_height="2dip"
-                android:background="#FF909090" />
-
-            <TableRow>
-                <TextView
-                    android:layout_column="1"
-                    android:text="Quit"
-                    android:padding="3dip" />
-            </TableRow>
-        </TableLayout>
-           </RelativeLayout>
-    <RelativeLayout
-        android:layout_marginTop="70dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="380dp"
         android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="485dp"
+        android:background="@drawable/selection_icon">
+
+        <TextView
+            android:id="@+id/p1"
+            android:layout_width="83dp"
+            android:layout_height="28dp"
+            android:layout_above="@+id/pp1"
+            android:text="Player 1"
+            app:layout_constraintBottom_toTopOf="@+id/pp4"
+            app:layout_constraintEnd_toStartOf="@+id/p2"
+            app:layout_constraintHorizontal_bias="0.64"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pp"
+            app:layout_constraintVertical_bias="1.0"></TextView>
+
+        <TextView
+            android:id="@+id/p3"
+            android:layout_width="83dp"
+            android:layout_height="28dp"
+            android:layout_above="@+id/pp1"
+            android:text="Player 1"
+            app:layout_constraintBottom_toTopOf="@+id/pp"
+            app:layout_constraintEnd_toStartOf="@+id/p"
+            app:layout_constraintHorizontal_bias="0.72"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"></TextView>
+
+        <TextView
+            android:id="@+id/p"
+            android:layout_width="83dp"
+            android:layout_height="28dp"
+            android:layout_above="@+id/pp1"
+            android:text="Player 1"
+            app:layout_constraintBottom_toTopOf="@+id/pp3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.66"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"></TextView>
+
+        <TextView
+            android:id="@+id/p2"
+            android:layout_width="83dp"
+            android:layout_height="28dp"
+            android:layout_above="@+id/pp1"
+            android:text="Player 1"
+            app:layout_constraintBottom_toTopOf="@+id/pp2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.69"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pp3"
+            app:layout_constraintVertical_bias="1.0"></TextView>
+
+        <ImageView
+            android:id="@+id/pp"
+            android:layout_width="85dp"
+            android:layout_height="25dp"
+            android:background="@drawable/pencil_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/pp3"
+            app:layout_constraintHorizontal_bias="0.65"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.25"></ImageView>
+
+        <ImageView
+            android:id="@+id/pp2"
+            android:layout_width="85dp"
+            android:layout_height="25dp"
+            android:background="@drawable/pencil_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.35"
+            app:layout_constraintStart_toEndOf="@+id/pp4"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+        <ImageView
+            android:id="@+id/pp3"
+            android:layout_width="85dp"
+            android:layout_height="25dp"
+            android:background="@drawable/pencil_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.69"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.25"></ImageView>
+
+        <ImageView
+            android:id="@+id/pp4"
+            android:layout_width="85dp"
+            android:layout_height="25dp"
+            android:background="@drawable/pencil_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
         <Button
-            android:background="@drawable/group_icon"
-            android:id="@+id/fbtn1"
-            android:layout_width="80dp"
-            android:layout_height="50dp"></Button>
-        <Button
-            android:background="@drawable/menu_icon"
-            android:layout_toRightOf="@+id/fbtn1"
-            android:id="@+id/fbtn2"
-            android:layout_width="60dp"
-            android:layout_height="50dp"></Button>
-        <Button
-            android:background="@drawable/cart_icon"
-            android:layout_toRightOf="@+id/fbtn2"
-            android:id="@+id/fbtn3"
-            android:layout_width="80dp"
-            android:layout_height="50dp"></Button>
-        <Button
-            android:background="@drawable/seeting_icon"
-            android:layout_toRightOf="@+id/fbtn3"
-            android:id="@+id/fbtn4"
-            android:layout_width="80dp"
-            android:layout_height="50dp"></Button>
-    </RelativeLayout>
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/play"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.85"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.9"></Button>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </LinearLayout>

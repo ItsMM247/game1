@@ -46,11 +46,22 @@
             android:layout_width="35dp"
             android:layout_height="30dp">
         </Button>
+        <Button
+            android:layout_marginStart="15dp"
+            android:layout_below="@+id/setting"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="25dp"
+        android:id="@+id/group"
+        android:background="@drawable/group_icon"
+        android:layout_width="45dp"
+        android:layout_height="40dp">
+    </Button>
     </RelativeLayout>
     <RelativeLayout
+        android:layout_gravity="center"
         android:background="@drawable/selection_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="440dp">
+        android:layout_width="380dp"
+        android:layout_height="450dp">
         <TextView
             android:layout_marginTop="35dp"
             android:textSize="23dp"
