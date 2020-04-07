@@ -57,110 +57,123 @@
         android:layout_height="40dp">
     </Button>
     </RelativeLayout>
+
     <RelativeLayout
+
+        android:layout_width="373dp"
+        android:layout_height="480dp"
         android:layout_gravity="center"
-        android:background="@drawable/selection_icon"
-        android:layout_width="380dp"
-        android:layout_height="450dp">
+        android:background="@drawable/selection_icon">
+
         <TextView
-            android:layout_marginTop="35dp"
-            android:textSize="23dp"
-            android:layout_marginHorizontal="100dp"
-            android:text="Select categories"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"></TextView>
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="100dp"
+            android:layout_marginTop="35dp"
+            android:text="Select categories"
+            android:textSize="22dp"></TextView>
+
         <RelativeLayout
-            android:layout_marginTop="50dp"
-            android:layout_centerHorizontal="true"
             android:layout_width="300dp"
-            android:layout_height="150dp">
-            <CheckBox
-                android:layout_marginTop="20dp"
-                android:id="@+id/Name"
-                android:text="Name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></CheckBox>
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp">
 
             <CheckBox
-                android:layout_below="@+id/Name"
-                android:id="@+id/Things"
-                android:text="Things"
+                android:id="@+id/Name"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></CheckBox>
-            <CheckBox
-                android:layout_below="@+id/Things"
-                android:id="@+id/Songs"
-                android:text="Songs"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></CheckBox>
-            <CheckBox
-                android:layout_marginLeft="81dp"
-                android:text="Place"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_toRightOf="@+id/Name"
+                android:text="Name"></CheckBox>
+
+            <CheckBox
+                android:id="@+id/Things"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Name"
+                android:text="Things"></CheckBox>
+
+            <CheckBox
+                android:id="@+id/Songs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Things"
+                android:text="Songs"></CheckBox>
+
+            <CheckBox
                 android:id="@+id/Place"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></CheckBox>
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="81dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/Name"
+                android:text="Place"></CheckBox>
+
             <CheckBox
-                android:layout_marginLeft="75dp"
-                android:layout_below="@+id/Place"
-                android:layout_toRightOf="@+id/Things"
                 android:id="@+id/Birds"
                 android:layout_width="wrap_content"
-                android:text="Birds"
-                android:layout_height="wrap_content"></CheckBox>
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Place"
+                android:layout_marginLeft="75dp"
+                android:layout_toRightOf="@+id/Things"
+                android:text="Birds"></CheckBox>
+
             <CheckBox
-                android:layout_marginLeft="79dp"
-                android:layout_below="@+id/Birds"
-                android:layout_toRightOf="@+id/Songs"
                 android:id="@+id/Fruits"
-                android:text="Fruits/Vegetables"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></CheckBox>
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Birds"
+                android:layout_marginLeft="79dp"
+                android:layout_toRightOf="@+id/Songs"
+                android:text="Fruits/Vegetables"></CheckBox>
+
             <CheckBox
-                android:layout_below="@+id/Songs"
                 android:id="@+id/Movies"
-                android:text="Movies"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></CheckBox>
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Songs"
+                android:text="Movies"></CheckBox>
+
             <CheckBox
-                android:layout_marginLeft="74dp"
-                android:layout_below="@+id/Fruits"
                 android:id="@+id/Animals"
-                android:layout_toRightOf="@+id/Movies"
-                android:text="Animals/Insects"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></CheckBox>
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Fruits"
+                android:layout_marginLeft="74dp"
+                android:layout_toRightOf="@+id/Movies"
+                android:text="Animals/Insects"></CheckBox>
         </RelativeLayout>
+
         <RelativeLayout
-            android:layout_marginTop="219dp"
             android:layout_width="match_parent"
-            android:layout_height="200dp">
+            android:layout_height="200dp"
+            android:layout_marginTop="219dp">
+
             <EditText
                 android:id="@+id/editText"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
                 android:layout_centerHorizontal="true"
                 android:gravity="center"
-                android:hint="Enter Game ID"
-                android:layout_width="200dp"
-                android:layout_height="50dp"
-                ></EditText>
+                android:hint="Enter Game ID"></EditText>
+
             <Button
                 android:id="@+id/invite"
-                android:layout_marginTop="10dp"
-                android:layout_below="@+id/editText"
-                android:layout_centerHorizontal="true"
-                android:text="Invite friends"
                 android:layout_width="200dp"
                 android:layout_height="50dp"
-                ></Button>
-            <Button
-                android:layout_marginTop="10dp"
-                android:layout_below="@+id/invite"
-                android:id="@+id/Play"
+                android:layout_below="@+id/editText"
                 android:layout_centerHorizontal="true"
-                android:text="Play"
+                android:layout_marginTop="10dp"
+                android:text="Invite friends"></Button>
+
+            <Button
+                android:id="@+id/Play"
                 android:layout_width="200dp"
-                android:layout_height="50dp"></Button>
+                android:layout_height="50dp"
+                android:layout_below="@+id/invite"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Play"></Button>
         </RelativeLayout>
     </RelativeLayout>
 </LinearLayout>

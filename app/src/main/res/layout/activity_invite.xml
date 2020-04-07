@@ -7,72 +7,86 @@
     android:orientation="vertical"
     android:background="@drawable/background_major"
     tools:context=".MainActivity">
+
     <RelativeLayout
-        android:layout_marginTop="0dp"
         android:layout_width="match_parent"
-        android:layout_height="45dp">
+        android:layout_height="wrap_content">
         <ImageButton
+            android:id="@+id/dph"
+            android:layout_marginTop="3dp"
             android:layout_marginLeft="15dp"
             android:background="@drawable/dp_icon"
-            android:layout_width="60dp"
-            android:layout_height="50dp"></ImageButton>
+            android:layout_width="80dp"
+            android:layout_height="75dp"></ImageButton>
 
         <TextView
-            android:layout_marginTop="-5dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/coin"
             android:background="@drawable/hint_icon"
             android:gravity="center"
-            android:layout_marginRight="9dp"
-            android:layout_toLeftOf="@+id/coin"
             android:id="@+id/hint"
             android:layout_width="85dp"
-            android:layout_height="45dp"
-            android:text="15" />
+            android:layout_height="30dp"/>
 
         <TextView
+            android:layout_marginTop="10dp"
+            android:layout_alignParentEnd="true"
             android:background="@drawable/coins_icon"
             android:gravity="center"
-            android:layout_marginRight="9dp"
-            android:layout_toLeftOf="@+id/setting"
+            android:layout_marginRight="10dp"
             android:id="@+id/coin"
             android:layout_width="85dp"
-            android:layout_height="match_parent"
-            android:text="1500"/>
+            android:layout_height="30dp"/>
         <Button
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/dph"
             android:id="@+id/setting"
-            android:layout_alignParentEnd="true"
             android:background="@drawable/seeting_icon"
-            android:layout_width="40dp"
-            android:layout_height="35dp"
-            android:layout_alignParentRight="true">
+            android:layout_width="35dp"
+            android:layout_height="30dp">
         </Button>
-    </RelativeLayout>
-    <RelativeLayout
-        android:background="@drawable/selection_icon"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="330dp"
-        android:layout_height="440dp">
         <Button
+            android:layout_marginStart="15dp"
+            android:layout_below="@+id/setting"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="25dp"
+            android:id="@+id/group"
+            android:background="@drawable/group_icon"
+            android:layout_width="45dp"
+            android:layout_height="40dp">
+        </Button>
+    </RelativeLayout><RelativeLayout
+        android:background="@drawable/selection_icon"
+    android:layout_width="373dp"
+    android:layout_height="480dp"
+    android:layout_gravity="center">
+        <Button
+            android:background="@drawable/pencil_icon"
             android:textSize="25dp"
             android:layout_marginTop="100dp"
             android:layout_centerHorizontal="true"
             android:text="Solo"
             android:id="@+id/solo"
-            android:layout_width="140dp"
-            android:layout_height="50dp"></Button>
+            android:layout_width="200dp"
+            android:layout_height="75dp"></Button>
         <Button
+            android:background="@drawable/pencil_icon"
             android:textSize="25dp"
             android:layout_marginTop="40dp"
             android:layout_centerHorizontal="true"
             android:text="Team Up"
             android:id="@+id/teamup"
             android:layout_below="@+id/solo"
-            android:layout_width="140dp"
-            android:layout_height="50dp"></Button>
+            android:layout_width="200dp"
+            android:layout_height="75dp"></Button>
 
         <Button
+            android:background="@drawable/pencil_icon"
             android:id="@+id/create"
-            android:layout_width="140dp"
-            android:layout_height="50dp"
+            android:layout_width="200dp"
+            android:layout_height="75dp"
             android:layout_below="@+id/teamup"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="40dp"

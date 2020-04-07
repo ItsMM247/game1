@@ -58,9 +58,9 @@
         </Button>
     </RelativeLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="380dp"
+        android:layout_width="373dp"
         android:layout_gravity="center"
-        android:layout_height="485dp"
+        android:layout_height="480dp"
         android:background="@drawable/selection_icon">
 
         <TextView
