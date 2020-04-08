@@ -8,6 +8,16 @@
     android:orientation="vertical"
     android:background="@drawable/home"
     tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/sign_out"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#F4F4F4"
+        android:textSize="18dp"
+        android:textStyle="bold" />
         <com.google.android.gms.common.SignInButton
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="80dp"

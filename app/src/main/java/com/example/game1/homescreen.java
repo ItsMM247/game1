@@ -66,15 +66,15 @@ public class homescreen extends AppCompatActivity {
         //AppEventsLogger.activateApp(this);
         next_pass=(ImageView)findViewById(R.id.next_pass);
         sign = (findViewById(R.id.signInButton));
-        texthint=(findViewById(R.id.hinthere));
+        //texthint=(findViewById(R.id.hinthere));
         textCoin=(findViewById(R.id.coin));
         mydb =new Database(this) ;
-        dp = (ImageView) findViewById(R.id.dp);
+        //dp = (ImageView) findViewById(R.id.dp);
         auth = FirebaseAuth.getInstance();
         loginButton_fb = findViewById(R.id.login_button_fb);
         callbackManager = CallbackManager.Factory.create();
         loginButton_fb.setReadPermissions(Arrays.asList("emails"));
-        sign_out = findViewById(R.id.show_id);
+        sign_out = findViewById(R.id.sign_out);
         next_pass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -99,16 +99,14 @@ public class homescreen extends AppCompatActivity {
                 googleSignInClient.signOut();
                 Toast.makeText(homescreen.this, "Log out", Toast.LENGTH_LONG).show();
                 sign_out.setVisibility(View.INVISIBLE);
-                Picasso.get().load("dp.jpg").into(dp);
+//                Picasso.get().load("dp.jpg").into(dp);
                 sign.setVisibility(View.VISIBLE);
                 loginButton_fb.setVisibility(View.VISIBLE);
-
-                AddData();
-
+      //          AddData();
             }
         });
     }
-    public void AddData(){
+    /*public void AddData(){
         loginButton_fb.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -120,7 +118,7 @@ public class homescreen extends AppCompatActivity {
                     }
                 }
         );
-    }
+    }*/
     private void signIn() {
         Intent signinintent = googleSignInClient.getSignInIntent();
         startActivityForResult(signinintent, RC_SIGN_IN);
@@ -133,7 +131,6 @@ public class homescreen extends AppCompatActivity {
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             handleSignInresult(task);
         }
-
     }
     private void handleSignInresult(Task<GoogleSignInAccount> completedTask) {
         try {
@@ -172,9 +169,9 @@ public class homescreen extends AppCompatActivity {
             String personEmail = account.getEmail();
             String peronID = account.getId();
             Uri personphoto = account.getPhotoUrl();
-            dp.setImageIcon(null);
-            sign_out.setText(personName);
-            Picasso.get().load(personphoto).into(dp);
+//            dp.setImageIcon(null);
+            sign_out.setText(""+personName);
+       //     Picasso.get().load(personphoto).into(dp);
         }
     }
     private void buttonloginfb(View view) {
