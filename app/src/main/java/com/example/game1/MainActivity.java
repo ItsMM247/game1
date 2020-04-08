@@ -233,9 +233,10 @@ public class MainActivity extends AppCompatActivity {
         }.start();
     }
     public void next_round() {
-        if (round <= 1) {
-            spin();
+        if (round <= 1)
+        {
             round++;
+            spin();
             time = 59;
             timer();
             e_place.setEnabled(true);
@@ -252,6 +253,12 @@ public class MainActivity extends AppCompatActivity {
             e_movie.setText(null);
             e_song.setEnabled(true);
             e_song.setText(null);
+        }
+        else {
+            Intent intent=new Intent(MainActivity.this,scoreborad.class);
+            intent.putExtra("score",score);
+            startActivity(intent);
+            finish();
         }
     }
     private String Number(int lastest)
@@ -376,7 +383,6 @@ public class MainActivity extends AppCompatActivity {
         rotateAnimation.setAnimationListener ( new Animation.AnimationListener () {
             @Override
             public void onAnimationStart(Animation animation) {
-                //Tvspin.setText ( "hello" );
             }
             @Override
             public void onAnimationEnd(Animation animation) {

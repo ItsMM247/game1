@@ -40,4 +40,5 @@ android:layout_marginTop="@android:dimen/app_icon_size"
         android:layout_marginLeft="290dp"
         android:id="@+id/next_pass"
         android:background="@drawable/right_arrow"/>
+
 </RelativeLayout>

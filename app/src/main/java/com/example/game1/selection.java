@@ -1,10 +1,14 @@
 package com.example.game1;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -25,6 +29,7 @@ import java.util.List;
 import java.util.Random;
 
 public class selection extends AppCompatActivity {
+    int  time = 59;
     DatabaseReference reference;
     TextView textView;
     EditText editText;
@@ -60,17 +65,18 @@ public class selection extends AppCompatActivity {
         coin=(TextView)findViewById(R.id.coin);
         editText=(EditText)findViewById(R.id.editText);
         reference = FirebaseDatabase.getInstance().getReference();
-        /*reference.child("solo").addValueEventListener(new ValueEventListener() {
+        reference.child("solo").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
-                    id_solo.add(postSnapshot.child("id").getValue().toString());
+          //          id_solo.add(postSnapshot.child("player_total").getValue().toString());
                 }
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
             }
         });
+        /*
         reference.child("team").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -95,7 +101,7 @@ public class selection extends AppCompatActivity {
         });*/
         play.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) {time=59;
                 if(flags_team==true)
                 { set_visibility();
                         Intent intent=new Intent(selection.this,MainActivity.class);
@@ -129,20 +135,44 @@ public class selection extends AppCompatActivity {
                     //setuserdata_forcreate_mode();
                 }
                 if(flags_solo==true)
-                {set_visibility();
-                    Intent intent=new Intent(selection.this,MainActivity.class);
-                    intent.putExtra("flags_solo",flags_solo);
-                    intent.putExtra("f_name",f_name);
-                    intent.putExtra("f_animal",f_animal);
-                    intent.putExtra("f_bird",f_bird);
-                    intent.putExtra("f_fruit",f_fruit);
-                    intent.putExtra("f_movie",f_movie);
-                    intent.putExtra("f_place",f_place);
-                    intent.putExtra("f_song",f_song);
-                    intent.putExtra("f_thing",f_thing);
-                    startActivity(intent);
-                    //finish();
-                    //setuserdata_forsolo_mode();
+                {final AlertDialog.Builder builder = new AlertDialog.Builder(selection.this);
+                    builder.setTitle("Fetching For Players");
+                    builder.setMessage("start time");
+                    builder.setPositiveButton("Cancel", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            dialogInterface.cancel();
+                        }
+                    });
+                    final AlertDialog alert = builder.create();
+                    alert.show();
+                    new CountDownTimer(60000, 1000) {
+                        @Override
+                        public void onTick(long l) {
+                            alert.setMessage("Remaining Time : "+checkDigit(time));
+                            time--;
+                            if(time==random_generator(1,60))
+                            {
+                                alert.setMessage("Player Found");
+                                Intent intent=new Intent(selection.this,MainActivity.class);
+                                intent.putExtra("flags_solo",flags_solo);
+                                intent.putExtra("f_name",f_name);
+                                intent.putExtra("f_animal",f_animal);
+                                intent.putExtra("f_bird",f_bird);
+                                intent.putExtra("f_fruit",f_fruit);
+                                intent.putExtra("f_movie",f_movie);
+                                intent.putExtra("f_place",f_place);
+                                intent.putExtra("f_song",f_song);
+                                intent.putExtra("f_thing",f_thing);
+                                startActivity(intent);
+                            }
+                        }
+                        @Override
+                        public void onFinish() {
+                            alert.setMessage("No Player Found");
+                        }
+                    }.start();
+                    set_visibility();
                 }
 
             }
@@ -170,10 +200,8 @@ public class selection extends AppCompatActivity {
             editText.setVisibility(View.VISIBLE);
         }
     }
-    public int random_generator()
+    public int random_generator(int min,int max)
     {
-        final int min = 111111111;
-        final int max = 999999999;
         final int random = new Random().nextInt((max - min) + 1) + min;
         return random;
     }
@@ -189,8 +217,23 @@ public class selection extends AppCompatActivity {
     }
     public void setuserdata_forsolo_mode()
     {
-        /*//if(id_solo==null)
-        reference.child("solo").push().setValue(random_generator());*/
+        /*if(id_solo==null) {
+            dataInsert obj = new dataInsert();
+            obj.setPlayer("1");
+            obj.setPlayer_total("1");
+            obj.setRoom_id("" + random_generator());
+            reference.child("solo").push().setValue(obj);
+        }
+        else {
+            for(Integer i=0;i<id_solo.size();i++)
+            {
+                int myNum = Integer.parseInt(id_solo.get(i));
+                if(myNum<5)
+                {
+                    reference.child("solo").child("player_total").setValue("2");
+                }
+            }
+        }*/
     }
     private void set_visibility() {
         if(name.isChecked())
@@ -243,5 +286,11 @@ public class selection extends AppCompatActivity {
     public void show(String Message){
         hinthere.setText("message");
         coinhere.setText(Message.toString());
+    }
+    public void search_Player() {
+
+    }
+    public String checkDigit(int number) {
+        return number <= 9 ? "0" + number : String.valueOf(number);
     }
 }
